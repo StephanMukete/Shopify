@@ -48,14 +48,14 @@
 
 <div class="col2-3">
     <div class= "row2">
-        {% if settings.list_heading != 'blank' %}
+        {% if settings.list_heading != blank %}
             <h3>{{settings.list_heading}} </h3>
-            <p>{{settings.article1_text}} </p>
         {% endif %}
-        {% if settings.article2_title != 'blank' %}
-            <h3>{{settings.article2_title}} </h3>
-            <p>{{settings.article2_text}} </p>
-        {% endif %}
+        {% for block in section.blocks %}
+            <li>
+                {{block.settings.list_text}}
+            <li>
+        {% endfor %}
     </div>
     <div class="row1">
         <img src="{{settings.list_img | img_url: ''}}">
