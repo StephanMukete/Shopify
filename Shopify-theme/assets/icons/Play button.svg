@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/Play button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="About-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1327.000000, -2880.000000)">
+        <g id="icons/Play-button" transform="translate(1330.000000, 2883.000000)">
+            <g id="Play-button">
+                <circle id="Oval-3" stroke="#FFFFFF" stroke-width="5" cx="29.599133" cy="29.599133" r="29.599133"></circle>
+                <path d="M22.0477024,39.7740406 L22.4193929,18.364635 C22.4356078,17.4306555 23.2058948,16.6866517 24.1398768,16.702872 C24.4568269,16.708369 24.7658511,16.8028325 25.031708,16.97548 L44.0673062,29.3373465 C44.8507276,29.8461049 45.0733808,30.8936266 44.5646224,31.677048 C44.3919749,31.942899 44.1480865,32.154888 43.8607804,32.2888283 L24.4534906,41.3363775 C23.6068505,41.7310754 22.6005472,41.3647039 22.2058494,40.5180638 C22.0973273,40.2852802 22.0432441,40.0308393 22.0477024,39.7740406 Z" id="Clip-2" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

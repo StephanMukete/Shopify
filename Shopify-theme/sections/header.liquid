@@ -1,0 +1,22 @@
+<header class="header">
+    <ul class="nav-items">
+    {% for link in linklists[section.settings.main_linklist].links %}
+        <li>
+            <a href="{{link.url}}">{{link.title}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</header>
+{% schema %}
+    {
+        "name": "Menu",
+        "settings": [
+            {
+                "type": "link_list",
+                "id": "main_linklist",
+                "label": "header",
+                "default": "main-menu"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,54 @@
+<footer>
+    {% if section.settings.facebook != 'blank' %}
+        <li>
+            <a href="{{section.settings.facebook}}">
+            <img src="{{ 'logo-facebook.svg' | asset_url }}">
+        </li>
+    {% endif %}
+        {% if section.settings.instagram != 'blank' %}
+        <li>
+            <a href="{{section.settings.instagram}}">
+            <img src="{{ 'logo-instagram.svg' | asset_url }}">
+        </li>
+    {% endif %}
+        {% if section.settings.twitter != 'blank' %}
+        <li>
+            <a href="{{section.settings.youtube}}">
+            <img src="{{ 'logo-twitter.svg' | asset_url }}">
+        </li>
+    {% endif %}
+        {% if section.settings.youtube != 'blank' %}
+        <li>
+            <a href="{{section.settings.youtube}}">
+            <img src="{{ 'logo-youtube.svg' | asset_url }}">
+        </li>
+    {% endif %}
+</footer>
+
+ {% schema %}
+    {
+       "name": "Footer",
+        "settings":[
+      {
+        "type": "text",
+        "id": "facebook",
+        "label": "facebook Link"
+      },
+      {
+        "type": "text",
+        "id": "instagram",
+        "label": "Instagram Link"
+  },
+  {
+        "type": "text",
+        "id": "twitter",
+        "label": "Twitter Link"
+  },
+  {
+        "type": "text",
+        "id": "youtube",
+        "label": "Youtube Link"
+      }
+        ]
+  }
+{% endschema %} 
