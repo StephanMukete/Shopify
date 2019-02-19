@@ -1,24 +1,17 @@
 .header {
     margin-top: 3rem;
-    margin-left: 30rem;
+    // margin-left: 70%;
     width: 100%;
     display: flex;
     justify-content: right;
-    float: right;
-    justify-items: center; }
+    justify-items: right; }
   
-  .footer {
-    background-color: gainsboro;
-    padding: 1rem; }
-    .footer li {
-      padding: 0.5rem; }
+
   
   .nav-items {
     list-style-type: none;
-    margin-left: 77%;
     display: flex;
-    justify-content: space-around;
-    float: left;
+    justify-content: right;
     width: 20%; 
   }
 
@@ -77,18 +70,13 @@
   display: flex;
   padding: 4rem; 
 }
-   
-// .col2 img{
-//       width: 50%;
-//       height:30rem;
-// }
 
 .col2 h2{
      font-weight: 1px;
 }
 .col2 .row2{
   width: 50%;
-  height: 80%;
+  // height: 80%;
 }
 .col2 .row1{
   background-image: url("Video-about-desktop2.png" );
@@ -102,7 +90,8 @@
   height: 10%;
 }
 .col2-2{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
   background-color:whitesmoke;
 }
    
@@ -111,38 +100,135 @@
       height:85%;
 }
 .col2-2 .row2{
-  width: 100%;
-  height:100%;
   padding: 4rem;
 }
-.col2-3{
-  display: flex;
-  padding: 4rem; 
+.list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
   background-color: Lightblue;
 }
-.col2-3 img{
-  margin-top: 15%; 
+.list img{
+margin-top: 5%;
 }
-.col2-4{
+.list .row2{
+  padding: 10%;
+  }
+.col2-3 img{
+  padding-top: 15%; 
+}
+// .col2-4{
+//   background-image: url("Wave-buildtrust-desktop.png" );
+//   color: white;
+//   background-color: blue;
+//   height:25rem;
+  
+// }
+
+li {
+  // height:10%;
+  padding:0.5rem;
+  margin-left:3%;
+ 
+}
+
+.testimonial{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  padding: 3rem;
   background-image: url("Wave-buildtrust-desktop.png" );
   color: white;
   background-color: blue;
-  height:25rem;
-  
 }
 
-li {
-  height:10%;
-  padding:0.5rem;
-  list-style-type: none;
-  margin-left:7%;
+.testimonial img{
+ float: left;
+  padding-right: 2%;
+  height: 50px;
+  width:50px;
+}
+
+footer .icons{
+  list-style: none;
+  color: black;
   display: flex;
-  justify-content: space-around;
-  float: left;
+  justify-content: flex-end;
+  padding-right: 5%; 
  
 }
-.footer{
-  background-color: gainsboro;
-  padding: 1rem;
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+}
+footer .links{
+  text-decoration: none;
+  padding: 5%;
+  list-style: none;
+  color: black;
+  display: flex;
+  padding-left: 10%;
+}
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100, 0, 0); }
+    .list{
+      grid-template-columns: 1fr ;
+    }
+    .testimonial{
+      grid-template-columns: 1fr ;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+  .col2{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .col2 .row2{
+    width: 100%;
+    padding: 2rem;
+  }
+  .col2 .row1{
+    background-image: url("Video-about-desktop2.png" );
+    width: 21rem;
+    height:15rem;
+  }
+  .col2-2{
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+  .testimonial{
+  grid-template-columns: 1fr ;
+}
+.list{
+  grid-template-columns: 1fr ;
+}
 }

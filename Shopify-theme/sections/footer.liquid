@@ -1,4 +1,12 @@
 <footer>
+<div class="links">
+        {% for link in linklists[section.settings.main_linklist].links %}
+        <li>
+            <a href="{{link.url}}">{{link.title}}</a>
+        </li>
+    {% endfor %}
+</div>
+    <div class= "icons">
     {% if section.settings.facebook != blank %}
         <li>
             <a href="{{section.settings.facebook}}">
@@ -23,6 +31,8 @@
             <img src="{{ 'logo-youtube.svg' | asset_url }}">
         </li>
     {% endif %}
+    </div>
+
 </footer>
 
  {% schema %}
@@ -44,11 +54,31 @@
         "id": "twitter",
         "label": "Twitter Link"
   },
+
   {
         "type": "text",
         "id": "youtube",
         "label": "Youtube Link"
-      }
-        ]
+      },
+                    {
+                "type": "link_list",
+                "id": "main_linklist",
+                "label": "header",
+                "default": "main-menu"
+            }
+        ],
+     "blocks": [
+    {
+      "type":"text",
+      "name": "List Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list_text",
+          "label":"Text"
+        }
+      ]
+    }
+  ]
   }
 {% endschema %} 

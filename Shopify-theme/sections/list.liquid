@@ -1,0 +1,34 @@
+ <div class="list">
+    <div class= "row2">
+        {% if settings.list_heading != blank %}
+            <h3>{{settings.list_heading}} </h3>
+        {% endif %}
+        {% for block in section.blocks %}
+            <li>
+                {{block.settings.list_text}}
+            </li>
+        {% endfor %}
+    </div>
+    <div class="row1">
+        <img src="{{settings.list_img | img_url: ''}}">
+    </div>
+</div>
+
+{% schema %}
+    {
+       "name": "List",
+     "blocks": [
+    {
+      "type":"text",
+      "name": "List Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list_text",
+          "label":"Text"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %} 

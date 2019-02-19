@@ -1,7 +1,8 @@
+<section>
 <h1>About Dr Chartegee</h1>
 <div id = "banner">
-<img src="{{settings.about_img | img_url: ''}}">
-<div class = "content"> <p>{{page.content}}</p> </div>
+<img src="{{settings.about_img | img_url: ''}}"></div>
+{% comment %} <div class = "content"><p>{{page.content}}</p> </div> {% endcomment %}
 <div class = "col1">
     {% if seetings.highlight != 'blank' %}
         <h2>{{settings.highlight}} </h2>
@@ -45,22 +46,13 @@
         {% endif %}
     </div> 
 </div>
+<div>
+{% section 'list' %}
+</div>
+ 
 
-<div class="col2-3">
-    <div class= "row2">
-        {% if settings.list_heading != blank %}
-            <h3>{{settings.list_heading}} </h3>
-        {% endif %}
-        {% for block in section.blocks %}
-            <li>
-                {{block.settings.list_text}}
-            <li>
-        {% endfor %}
-    </div>
-    <div class="row1">
-        <img src="{{settings.list_img | img_url: ''}}">
-    </div>
-</div>
 <div class="col2-4">
-    the
+  {% section 'testimonials' %}
+  </div>
 </div>
+</section>
