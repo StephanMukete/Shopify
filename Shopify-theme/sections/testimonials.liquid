@@ -1,28 +1,23 @@
-
-    <div class= "testimonial">
-        {% for block in section.blocks %}
-            {% assign i = forloop.index  | modulo:2 %}
-             {% if i == 0 %}
-                <div class="arr1">
-                    <p>{{block.settings.testimonial_text}}</p>
+<div class= "testimonial">
+        
+    {% for block in section.blocks %}
+        {% assign i = forloop.index  | modulo:2 %}
+        {% if i == 0 %}
+          <div class="arr1">
+              <p>{{block.settings.testimonial_text}}</p>
+              <img src="{{block.settings.testimonial_img| img_url: ''}}">
+              <p> {{block.settings.testimonial_name}}</p>
+          </div>
+        {% endif %}
+      
+        {% if i != 0 %}
+            <div class="arr2">
+                <p>{{block.settings.testimonial_text}}</p>
                 <img src="{{block.settings.testimonial_img| img_url: ''}}">
-               <p> {{block.settings.testimonial_name}}</p>
-               
-                </div>
-             {% endif %}
-            {% if i != 0 %}
-                <div class="arr2">
-                    <p>{{block.settings.testimonial_text}}</p>
-                
-                <img src="{{block.settings.testimonial_img| img_url: ''}}">
-               <p> {{block.settings.testimonial_name}}</p>
-            
-               </div>
-            {% endif %}
-                
-
-            
-        {% endfor %}
+                <p> {{block.settings.testimonial_name}}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>
 
 {% schema %}
