@@ -1,18 +1,18 @@
 <section>
 <h1>About Dr Chartegee</h1>
 <div id = "banner">
-<img src="{{settings.about_img | img_url: ''}}"></div>
-{% comment %} <div class = "content"><p>{{page.content}}</p> </div> {% endcomment %}
+<div class = "cover-photo"><img src="{{settings.about_img | img_url: ''}}"></div>
+</div>
+<div class = "content"><p>{{page.content}}</p> </div>
 <div class = "col1">
-    {% if seetings.highlight != 'blank' %}
+
+    {% if setings.highlight != 'blank' %}
         <h2>{{settings.highlight}} </h2>
     {% endif %}
     <img src="{{ 'BBC_News.svg' | asset_url }}">
     <img src="{{ 'BBC.svg' | asset_url }}">
      <img src="{{ 'Daily_Telegraph.svg' | asset_url }}">
     <img src="{{ 'logo-mbg-lg.svg' | asset_url }}">
-     {% comment %} <img src="{{ 'radio-times-seeklogo.com_.svg' | asset_url }}"> {% endcomment %}
-    {% comment %} <img src="{{ 'right.svg' | asset_url }}"> {% endcomment %}
 </div>
 <div class="col2">
     <div class= "row2">
