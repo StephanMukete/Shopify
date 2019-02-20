@@ -4,18 +4,33 @@
     <div class = "cover-photo"><img src="{{settings.clinic_img | img_url: ''}}"></div>
 </div>
 <div class = "content"><p>{{page.content}}</p> </div>
-<div>
+<div class="learn-more">
+{% section 'learn_more' %}
     <form name="contact" action="" method="post">
         <div class="box">
             <h2>be updated</h2>
-            <p>subscribe to my channel to make sure you dont miss any info</p>
+            <p>Learn how to increase your energy in just 5 days. Sign up for my free part 5 video series to get started</p>
             <label class="form-label" for="email">
-                Email:
+                Name:
             </label>
+            <input class="form-field" name="name" id="name" />
+            <div>
+                 <label class="form-label" for="email">
+                 
+                 Email:
+                
+            </label>
+                 
+
             <input class="form-field" name="email" id="email" />
-            <input class="form-button" type="submit" value="Subscribe" />
+            </div>
+            <input class="form-button" type="submit" value="Sign Up" />
         </div>
     </form>
+</div>
+
+<div>
+
 
 </div>
 

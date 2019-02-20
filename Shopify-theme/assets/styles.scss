@@ -117,13 +117,7 @@ margin-top: 5%;
 .col2-3 img{
   padding-top: 15%; 
 }
-// .col2-4{
-//   background-image: url("Wave-buildtrust-desktop.png" );
-//   color: white;
-//   background-color: blue;
-//   height:25rem;
-  
-// }
+
 
 li {
   // height:10%;
@@ -169,6 +163,30 @@ footer .links{
   padding-left: 10%;
 }
 
+.learn-more{
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+}
+form{
+  padding: 1rem;
+
+}
+form .box{
+  margin-top:2%;
+  background-color:white;
+}
+input, label{
+ width: 50%;
+  margin: 2%;
+}
+.form-button{
+  margin:7%;
+  padding: 2%;
+  width: 50%;
+  color:white;
+  background-color: blue;
+}
 @media screen and (min-width: 1171px) {
   h1{
     font-size: 6rem;
@@ -259,5 +277,8 @@ h1{
 }
 .list{
   grid-template-columns: 1fr ;
+}
+.learn-more{
+  grid-template-columns:  1fr ;
 }
 }
