@@ -1,12 +1,12 @@
 <footer>
 <div class="links">
-        {% for link in linklists[section.settings.main_linklist].links %}
+    {% for link in linklists[section.settings.main_linklist].links %}
         <li>
             <a href="{{link.url}}">{{link.title}}</a>
         </li>
     {% endfor %}
 </div>
-    <div class= "icons">
+<div class= "icons">
     {% if section.settings.facebook != blank %}
         <li>
             <a href="{{section.settings.facebook}}">
@@ -19,13 +19,13 @@
             <img src="{{ 'logo-instagram.svg' | asset_url }}">
         </li>
     {% endif %}
-        {% if section.settings.twitter != blank %}
+    {% if section.settings.twitter != blank %}
         <li>
             <a href="{{section.settings.youtube}}">
             <img src="{{ 'logo-twitter.svg' | asset_url }}">
         </li>
     {% endif %}
-        {% if section.settings.youtube != blank %}
+    {% if section.settings.youtube != blank %}
         <li>
             <a href="{{section.settings.youtube}}">
             <img src="{{ 'logo-youtube.svg' | asset_url }}">
@@ -44,41 +44,45 @@
         "id": "facebook",
         "label": "facebook Link"
       },
+
       {
         "type": "text",
         "id": "instagram",
         "label": "Instagram Link"
-  },
-  {
+      },
+
+      {
         "type": "text",
         "id": "twitter",
         "label": "Twitter Link"
-  },
+      },
 
-  {
+      {
         "type": "text",
         "id": "youtube",
         "label": "Youtube Link"
       },
-                    {
-                "type": "link_list",
-                "id": "main_linklist",
-                "label": "header",
-                "default": "main-menu"
-            }
-        ],
-     "blocks": [
-    {
-      "type":"text",
-      "name": "List Text",
-      "settings": [
+         
+      {
+          "type": "link_list",
+          "id": "main_linklist",
+          "label": "header",
+          "default": "main-menu"
+      }
+  ],
+
+    "blocks": [
         {
-          "type": "text",
-          "id": "list_text",
-          "label":"Text"
+            "type":"text",
+            "name": "List Text",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "list_text",
+                    "label":"Text"
+                }
+            ]
         }
-      ]
-    }
-  ]
-  }
+    ]
+}
 {% endschema %} 
