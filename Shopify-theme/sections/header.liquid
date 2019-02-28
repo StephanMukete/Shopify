@@ -1,5 +1,7 @@
 <header class="header">
+    <img src="{{ 'logo.svg' | asset_url }}">
     <ul class="nav-items">
+    
         {% for link in linklists[section.settings.main_linklist].links %}
             <li>
                 <a href="{{link.url}}">{{link.title}}</a>
